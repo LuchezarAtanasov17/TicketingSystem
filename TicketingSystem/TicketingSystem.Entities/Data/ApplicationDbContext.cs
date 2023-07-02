@@ -10,13 +10,13 @@ using TicketingSystem.Entities.Models;
 
 namespace TicketingSystem.Entities.Data
 {
-    public class TicketingSystemDbContext : IdentityDbContext<User, Role, Guid>
+    public class ApplicationDbContext : IdentityDbContext<User, Role, Guid>
     {
-        public TicketingSystemDbContext(DbContextOptions options) : base(options)
+        public ApplicationDbContext(DbContextOptions options) : base(options)
         {
         }
 
-        protected TicketingSystemDbContext()
+        protected ApplicationDbContext()
         {
         }
 

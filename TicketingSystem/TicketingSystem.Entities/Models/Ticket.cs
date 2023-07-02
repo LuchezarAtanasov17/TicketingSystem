@@ -43,7 +43,7 @@ namespace TicketingSystem.Entities.Models
         [ForeignKey(nameof(ProjectId))]
         public Project Project { get; set; }
 
-        public ICollection<FileStream>? Files { get; set; } = new HashSet<FileStream>();
+        public byte[]? Files { get; set; }
 
         public ICollection<Message> Messages { get; set; } = new HashSet<Message>();
     }

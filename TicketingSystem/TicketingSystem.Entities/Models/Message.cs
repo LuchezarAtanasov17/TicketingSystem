@@ -30,7 +30,7 @@ namespace TicketingSystem.Entities.Models
         [ForeignKey(nameof(AuthorId))]
         public User Author { get; set; }
         
-        public ICollection<FileStream> Files { get; set; } = new HashSet<FileStream>();
+        public byte[]? Files { get; set; }
 
     }
 }
