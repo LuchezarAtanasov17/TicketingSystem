@@ -12,10 +12,10 @@ namespace TicketingSystem.Entities.Models
     {
         [Required]
         [StringLength(30)]
-        public string Firstname { get; set; }
+        public string FirstName { get; set; }
 
         [Required]
         [StringLength(30)]
-        public string Lastname { get; set; }
+        public string LastName { get; set; }
     }
 }

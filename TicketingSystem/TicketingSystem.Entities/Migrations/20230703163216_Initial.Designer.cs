@@ -12,14 +12,14 @@ using TicketingSystem.Entities.Data;
 namespace TicketingSystem.Entities.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230702233346_Initial")]
+    [Migration("20230703163216_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.10")
+                .HasAnnotation("ProductVersion", "6.0.18")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -353,12 +353,12 @@ namespace TicketingSystem.Entities.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
-                    b.Property<string>("Firstname")
+                    b.Property<string>("FirstName")
                         .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
-                    b.Property<string>("Lastname")
+                    b.Property<string>("LastName")
                         .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
@@ -413,11 +413,11 @@ namespace TicketingSystem.Entities.Migrations
                         {
                             Id = new Guid("62448744-4356-44dc-a005-0bfb6ba9e8b2"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "165a2472-88c8-4d0a-84cf-e3d0a69e90ef",
+                            ConcurrencyStamp = "fb3908a4-dc05-4fcd-b98c-ab74977b6f32",
                             Email = "user@mail.com",
                             EmailConfirmed = false,
-                            Firstname = "Ivan",
-                            Lastname = "Ivanov",
+                            FirstName = "Ivan",
+                            LastName = "Ivanov",
                             LockoutEnabled = false,
                             NormalizedEmail = "USER@MAIL.COM",
                             NormalizedUserName = "USER",
@@ -429,11 +429,11 @@ namespace TicketingSystem.Entities.Migrations
                         {
                             Id = new Guid("1456c79b-7080-4586-8467-900a3cb033fe"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "1a727905-2903-4468-86fc-3ce91dd005b2",
+                            ConcurrencyStamp = "163a798f-21a3-4625-8aa2-1e4557cab26d",
                             Email = "user2@gmail.com",
                             EmailConfirmed = false,
-                            Firstname = "Georgi",
-                            Lastname = "Georgiev",
+                            FirstName = "Georgi",
+                            LastName = "Georgiev",
                             LockoutEnabled = false,
                             NormalizedEmail = "USER2@GMAIL.COM",
                             NormalizedUserName = "USER2",

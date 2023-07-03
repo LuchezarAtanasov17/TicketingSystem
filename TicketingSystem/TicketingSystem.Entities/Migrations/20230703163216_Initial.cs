@@ -28,8 +28,8 @@ namespace TicketingSystem.Entities.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Firstname = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
-                    Lastname = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
+                    FirstName = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
+                    LastName = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -240,11 +240,11 @@ namespace TicketingSystem.Entities.Migrations
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
-                columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "Firstname", "Lastname", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
+                columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { new Guid("1456c79b-7080-4586-8467-900a3cb033fe"), 0, "1a727905-2903-4468-86fc-3ce91dd005b2", "user2@gmail.com", false, "Georgi", "Georgiev", false, null, "USER2@GMAIL.COM", "USER2", null, null, false, null, false, "User2" },
-                    { new Guid("62448744-4356-44dc-a005-0bfb6ba9e8b2"), 0, "165a2472-88c8-4d0a-84cf-e3d0a69e90ef", "user@mail.com", false, "Ivan", "Ivanov", false, null, "USER@MAIL.COM", "USER", null, null, false, null, false, "User" }
+                    { new Guid("1456c79b-7080-4586-8467-900a3cb033fe"), 0, "163a798f-21a3-4625-8aa2-1e4557cab26d", "user2@gmail.com", false, "Georgi", "Georgiev", false, null, "USER2@GMAIL.COM", "USER2", null, null, false, null, false, "User2" },
+                    { new Guid("62448744-4356-44dc-a005-0bfb6ba9e8b2"), 0, "fb3908a4-dc05-4fcd-b98c-ab74977b6f32", "user@mail.com", false, "Ivan", "Ivanov", false, null, "USER@MAIL.COM", "USER", null, null, false, null, false, "User" }
                 });
 
             migrationBuilder.InsertData(
