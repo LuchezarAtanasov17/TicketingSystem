@@ -1,0 +1,44 @@
+﻿@page "/projects"
+@inject HttpClient Http;
+
+<ProjectForm></ProjectForm>
+
+<h3>Projects</h3>
+
+<table class="table">
+    <thead>
+        <tr class="table-dark">
+            <th scope="col">#</th>
+            <th scope="col">Project name</th>
+            <th scope="col">Description</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (projects == null)
+        {
+            <tr><td><em>Loading...</em></td></tr>
+        }
+        else
+        {
+            @for (int i = 0; i < projects.Count; i++)
+            {
+                <tr>
+                    <th scope="row">@(i + 1)</th>
+                    <td>@projects[i].Name</td>
+                    <td>@projects[i].Description</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+@code {
+    private Project[] projects;
+
+    protected override async Task OnInitializedAsync()
+    {
+        projects = await Http.GetFromJsonAsync<Project[]>("api/Projects");
+        StateHasChanged();
+    }
+}

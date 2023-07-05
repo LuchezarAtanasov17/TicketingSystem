@@ -1,0 +1,34 @@
+﻿@using TicketingSystem.Web.Models;
+
+<div class="card">
+    <div class="card-header">
+        Add a project
+    </div>
+    <div class="card-body">
+        <EditForm Model="@project" OnInvalidSubmit="HandleValidSubmit">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+            <div class="form-group">
+                <label for="nameInput">Name</label>
+                <InputText class="form-control" id="titleInput" @bind-Value="project.Name"></InputText>
+            </div>
+            <div class="form-group">
+                <label for="descriptionInput">Description</label>
+                <InputText class="form-control" id="descriptionInput" @bind-Value="project.Description"></InputText>
+            </div>
+            <br />
+            <div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    private Project project = new Project();
+
+    public void HandleValidSubmit()
+    {
+
+    }
+}

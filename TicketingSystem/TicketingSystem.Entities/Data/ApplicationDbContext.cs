@@ -11,7 +11,7 @@ namespace TicketingSystem.Entities.Data
         {
         }
 
-        protected ApplicationDbContext()
+        public ApplicationDbContext()
         {
         }
 
